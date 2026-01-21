@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cosmic Mixtape - YouTube Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="yt-player" style="position: absolute; top: -9999px;"></div>
+
+    <div id="ui">
+        <div class="controls">
+            <button class="btn add" onclick="createCassette()">ADD CASSETTE</button>
+            <button class="btn load" onclick="setYouTubeURL()">SET SONG (YT)</button>
+            <button class="btn gift" onclick="sendGift()">SEND MIXTAPE</button>
+            <button id="play-btn" class="btn play" onclick="togglePlay()">PLAY / PAUSE</button>
+            <button class="btn capture" onclick="captureScene()">CAPTURE</button>
+        </div>
+        <p class="hint">CLICK: SELECT • DBL CLICK: RENAME • SET SONG: PASTE YT LINK • SEND: EMAIL GIFT</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/DragControls.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* 1. Base y Reset */
+body { 
+    margin: 0; 
+    padding: 0;
+    overflow: hidden; 
+    background-color: #000; 
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+}
+
+/* 2. Contenedor de UI Principal */
+#ui { 
+    position: absolute; 
+    bottom: 40px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+    z-index: 1000; 
+    width: 90%; 
+    transition: opacity 0.8s ease; 
+}
+
+/* 3. Panel de Controles (Glassmorphism) */
+.controls { 
+    display: inline-flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; 
+    padding: 20px 30px; 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 60px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
+}
+
+/* 4. Estilo de Botones */
+.btn { 
+    background: transparent; 
+    border: 2px solid; 
+    border-radius: 40px; 
+    padding: 12px 22px; 
+    font-weight: 900; 
+    font-size: 11px; 
+    letter-spacing: 2px; 
+    cursor: pointer; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+    text-transform: uppercase; 
+}
+
+/* Colores por función */
+.add { color: #ff00ff; border-color: rgba(255, 0, 255, 0.4); }
+.add:hover { background: #ff00ff; color: #fff; box-shadow: 0 0 25px #ff00ff; }
+
+.load { color: #ff9433; border-color: rgba(255, 148, 51, 0.4); }
+.load:hover { background: #ff9433; color: #fff; box-shadow: 0 0 25px #ff9433; }
+
+.gift { color: #f1c40f; border-color: rgba(241, 196, 15, 0.4); }
+.gift:hover { background: #f1c40f; color: #000; box-shadow: 0 0 25px #f1c40f; }
+
+.play { color: #00ffff; border-color: rgba(0, 255, 255, 0.4); }
+.play:hover { background: #00ffff; color: #000; box-shadow: 0 0 25px #00ffff; }
+
+.capture { color: #a4ffc9; border-color: rgba(164, 255, 201, 0.4); }
+.capture:hover { background: #a4ffc9; color: #000; box-shadow: 0 0 25px #a4ffc9; }
+
+/* 5. Hint Text (Instrucciones) */
+.hint { 
+    color: #ff00ff; 
+    font-size: 10px; 
+    letter-spacing: 3px; 
+    margin-top: 25px; 
+    text-shadow: 0 0 10px #ff00ff; 
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+/* 6. Animación para la interfaz */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* 7. Ocultar el reproductor de YouTube real */
+#yt-player {
+    pointer-events: none;
+    user-select: none;
+}
