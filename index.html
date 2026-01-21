@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cosmic Mixtape - YouTube Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Mixtape</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="yt-player" style="position: absolute; top: -9999px;"></div>
+    <div id="yt-player"></div>
 
     <div id="ui">
         <div class="controls">
@@ -16,7 +17,7 @@
             <button id="play-btn" class="btn play" onclick="togglePlay()">PLAY / PAUSE</button>
             <button class="btn capture" onclick="captureScene()">CAPTURE</button>
         </div>
-        <p class="hint">CLICK: SELECT • DBL CLICK: RENAME • SET SONG: PASTE YT LINK • SEND: EMAIL GIFT</p>
+        <p class="hint">CLICK: SELECT • DBL CLICK: RENAME • DRAG: PAINT TRAILS</p>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
